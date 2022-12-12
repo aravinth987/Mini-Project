@@ -1,0 +1,131 @@
+contract for registratn - 0x3d9b696bcf1da53130e3a1177c17f44c8e366372
+
+abi - 
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_Name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_Email",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_Password",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_phone",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_hospital_name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint128",
+				"name": "doc_id",
+				"type": "uint128"
+			}
+		],
+		"name": "store",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
+
+
+
+
+
+
+
+
+
+patient details
+
+contract address - 0x3d9b696bcf1da53130e3a1177c17f44c8e366372
+
+
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint128",
+				"name": "_p_id",
+				"type": "uint128"
+			},
+			{
+				"internalType": "string",
+				"name": "_p_name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint128",
+				"name": "_age",
+				"type": "uint128"
+			},
+			{
+				"internalType": "string",
+				"name": "_bloodgrp",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_bp",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_diag",
+				"type": "string"
+			}
+		],
+		"name": "store_patientdetails",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint128",
+				"name": "p_id",
+				"type": "uint128"
+			}
+		],
+		"name": "retreive_patientdetails",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "uint128",
+				"name": "",
+				"type": "uint128"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

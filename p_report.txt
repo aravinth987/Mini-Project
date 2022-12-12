@@ -1,0 +1,69 @@
+//SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.4.22 <0.7.0;
+
+ 
+contract p_details {
+    
+     
+      mapping(uint128 => patient)  p_report;
+      
+    
+     struct  patient{
+         uint128 p_id;
+         string p_name;
+         uint128 age;
+         string bloodgrp;
+         uint256 b_pressure;
+         string diagnosis;    
+          
+     }
+     patient p;
+     
+     address admin;
+     
+      
+    
+      constructor() public {
+          admin = 0xc386f03dFC6334F4e27C7ff1dE2f5F10d8053649;
+      }
+      
+      
+      // modifier to give access only to hospital
+      modifier isOwner() {
+
+         require(msg.sender == admin, "Access is not allowed");
+
+         _;
+
+     }
+      
+     
+     
+    
+  
+     function store_patientdetails(uint128 _p_id, string memory _p_name, uint128 _age, string memory _bloodgrp, uint256 _bp, string memory _diag)public isOwner {
+        
+        p.p_id = _p_id;
+        p.p_name = _p_name;
+        p.age = _age;
+        p.bloodgrp = _bloodgrp;
+        p.b_pressure = _bp;
+        p.diagnosis = _diag;
+        p_report[_p_id] = p;
+        
+        
+         }
+         
+        
+
+         function retreive_patientdetails(uint128 p_id) public view returns (string memory, uint128, string memory){
+             
+     patient memory p1 = p_report[p_id];
+     
+     return (p1.p_name, p1.age, p1.diagnosis);
+     
+          }
+          
+          
+          
+}
